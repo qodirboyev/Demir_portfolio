@@ -1,0 +1,164 @@
+/* ======================================= Asosiy stylelar ================================================================ */
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: linear-gradient(to right bottom,white,rgb(1, 1, 222),rgb(2, 2, 223),black);
+    font-family: "Bebas Neue", sans-serif;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+.cantener{
+    width: 1200px;
+    margin: auto;
+}
+
+.clearfix{
+    clear: both;
+}
+
+/* blur oyna style */
+.blur_style{      
+    width: 100vw;
+    height: 50vh;
+    position: fixed;
+    z-index: 11;
+    background: linear-gradient(135deg,rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transform: scale(1.2,1);
+    animation: blur_oyna 0.7s linear forwards;
+}
+
+.blur_oyna_top{
+    top: 0;
+    transform-origin: top;
+}
+
+.blur_oyna_bottom{
+    bottom: 0;
+    transform-origin: bottom;
+}
+
+@keyframes blur_oyna{
+    100%{
+        transform: scale(1.2,0);
+    }
+}
+/* blur oyna style */
+
+
+/* button style */
+.button{
+    background: linear-gradient(to right bottom,white,blue,black,black);
+    padding: 10px 20px;
+    color: white;
+    border-radius: 40%;
+    width: 40%;
+    transition:all 0.5s;
+}
+
+.button:hover{
+    background: linear-gradient(to left top,white,blue,black,black);
+    color: yellow;
+    width: 50%;
+}
+/* button style */
+
+
+/* h4 matn style */
+.matn_h4{
+    text-shadow: 3px 3px 3px black;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 1px;
+}
+/* matn style */
+
+/* section_name */
+.section_name{
+    font-size: 16px;
+    transform: translate(100px,100px);
+    display: inline-block;
+}
+.blur_line{
+    width: 100px;
+    height: 5px;
+    background-color: white;
+    filter: blur(6px);
+    display: inline-block;
+    margin-left: 3px;
+    transform: translate(100px,100px);
+}
+
+/* section_name */
+
+
+/* rgb_orrow */
+.rgb_orrow{
+    color: yellow;
+    animation: rgb-orrow 0.5s linear infinite alternate;
+}
+
+@keyframes rgb-orrow{
+    0%{
+        transform: translate(-3px,0px) scale(0.8,0.8) rotate(90deg); 
+        color: green;
+    }
+
+    100%{
+        transform: translate(3px,0px) scale(1.2,1.2) rotate(90deg);
+    }
+
+}
+/* rgb_orrow */
+
+
+/* ============================= Footer bolim style ======================================= */
+.Footer_bolim{
+    padding: 50px 20px;
+    background-color: black;
+    width: 100%;
+}
+
+.Footer_cantener{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Footer_media i{
+    color: azure;
+    font-size: 30px;
+    transition: all 0.3s;
+    margin: 5px;
+}
+.Footer_media i:hover{
+    color: rgba(111, 255, 0, 0.441);
+    transform: scale(1.1,1.1) translateY(-3px);
+}
+
+
+.Footer_info p{
+    font-size: 24px;
+    padding: 15px;
+}
+/* ============================= Footer bolim style ======================================= */
+
+/* site_logo style */
+.site_logo img {
+    width: 50px;
+    padding: 3px;
+    border-radius: 50%;
+    margin: 2px 0px 0px 0px;
+    transition: all 0.5s;
+}
+.site_logo img:hover{
+    transform: scale(1.1,1.1);
+}
+/* site_logo style */

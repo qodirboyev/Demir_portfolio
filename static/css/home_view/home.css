@@ -1,0 +1,451 @@
+
+
+/* ================================================== Header section style ================================================ */
+.header_bolim{
+    width: 100%;
+    background: linear-gradient(to right bottom,white,blue,rgb(1, 1, 222),rgb(2, 2, 223),black,black);
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    box-shadow: 0px 5px 10px black;
+}
+
+.header_div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.menu_ul{
+    margin: 0px;
+    padding: 0px;
+}
+.menu_element{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu_element a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 3px 15px;
+    letter-spacing: 1px;
+    transition: all 0.5s;
+    border-radius: 15px;
+    text-shadow: 3px 3px 3px black;
+}
+.menu_element a:hover{
+    color: yellow;
+    background: linear-gradient(to left top,white,blue,black,black);
+    transform: translate(0px,-5px) scale(1.1,1.1);
+}
+
+.user_register{
+
+}
+
+
+
+/* ============================= Asosiy section style ==================================== */
+
+.Asosiy_bolim{
+    padding: 100px 20px 30px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.Asosiy_bolim_matn h4{
+    font-size: 24px;
+    margin: 10px 0px;
+    animation: Welcome_text 1s linear;
+
+}
+
+.Asosiy_bolim_matn h1{
+    font-size: 46px;
+    margin: 10px 0px;
+    animation: Welcome_text 0.7s linear;
+}
+@keyframes Welcome_text{
+    0%{
+        opacity: 0.2;
+        transform: translate(-100px,0px);
+    }
+    50%{
+        opacity: 0.5;
+    }
+}
+
+.Asosiy_bolim_rasm img{
+    width: 400px;
+    border-radius: 50%;
+    animation: logo 0.7s linear;
+    transition: all 0.6s;
+}
+.Asosiy_bolim_rasm img:hover{
+    transform: scale(1.1,1.1);
+}
+
+@keyframes logo{
+    0%{
+        transform: scale(0.7,0.7) translate(100px,0px) rotate(70deg);
+        filter: blur(5px);
+    }
+    50%{
+        transform: scale(0.9,0.9) rotate(35deg) translate(50px,0px);
+        filter: blur(3px);
+    }
+}
+
+
+
+
+
+
+/* ======================== Men haqimada section ================================= */
+.Men_haqimda_bolim{
+    display: grid;
+    grid-template-columns: 35% 40%;
+    padding: 100px 20px 30px 20px;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+}
+
+.Men_haqimda_rasm{
+    grid-row: 1 /span 2;
+}
+
+.Men_haqimda_rasm img{ 
+    border-radius: 0px 100px 0px 100px;
+    transition: all 1s;
+    height: 400px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.Men_haqimda_rasm img:hover,
+.Men_haqimda_matn:hover {
+    border-radius: 0px 100px 0px 100px;
+    transform: scale(1.1,1.1);
+}
+
+
+.Men_haqimda_matn{
+    border: 3px double white;
+    grid-row: 1 /span 2;
+    text-align: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.237),rgba(0, 0, 0, 0.201));
+    backdrop-filter: blur(15px);
+    border-radius: 100px 0px 100px 0px;
+    box-shadow: 5px 5px 5px black;
+    transition: all 1s;
+}
+
+.Men_haqimda_matn h4{
+    text-align: center;
+    padding: 140px 0px 20px 10px;
+    font-size: 24px;
+}
+
+
+/* ================================ loyihalar_bolim style ============================================ */
+
+
+.loyihalar_bolim{
+    padding: 100px 20px 30px 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+}
+
+
+.loyihalar_title{
+    width: 100%;
+    font-size: 46px;
+    text-align: center;
+    grid-column: 1 /span 2;
+    padding: 20px;
+}
+
+
+.loyihalar_matn{
+    text-align: center;
+    padding: 10px 0px 10px 35px;
+    box-sizing: border-box;
+}
+
+.loyihalar_matn p{
+    font-size: 24px;
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+.loyihalar_rasm{
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 400px;
+    overflow: hidden;
+}
+
+.track_bar{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    animation: track-bar 10s linear infinite alternate;
+    align-items: center;
+}
+
+.track_bar_item{
+    width: 80%;
+    border-radius: 20px;
+    margin: 5px 0px 5px 0px;
+}
+
+
+@keyframes track-bar {
+    20%{
+        transform: translateY(-280px) scale(1.1,1.1);
+    }
+
+    80%{
+        transform: translateY(-980px) scale(1.1,1.1);
+    }
+    100%{
+        transform: translateY(-1200px) scale(1,1);
+    }
+}
+
+
+
+
+
+
+/* ============================= Logolar bolim style ==================================== */
+
+.Logolar_bolim{
+    padding: 100px 20px 30px 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    overflow: hidden;
+    justify-content: space-evenly;
+}
+
+
+.logo_carusel_top,.logo_carusel_bottom{
+    grid-column: 1 /span 2;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    animation: logo-carusel 5s linear infinite alternate;
+    
+}
+.logo_carusel_bottom{
+    animation-direction: alternate-reverse;
+}
+
+
+.logo_carusel_top img,
+.logo_carusel_bottom img{
+    width: 100%;
+    margin: 0px 5px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    transition: all 0.5s;
+}
+.logo_carusel_top img:hover,
+.logo_carusel_bottom img:hover{
+    transform: translateY(-5px) scale(1.2,1.2);
+}
+
+
+@keyframes logo-carusel{
+    0%{
+        transform: translateX(0px) scale(1.1,1.1);
+    }
+    100%{
+        transform: translateX(-300px) scale(1.1,1.1);
+    }
+}
+
+.Logolar_logo{
+    text-align: center;
+}
+.Logolar_logo img:hover{
+    transform: scale(1.1,1.1);
+    padding: 10px;
+}
+.Logolar_logo img{
+    padding: 20px 20px;
+    border-radius: 50%;
+    width: 380px;
+    box-shadow: 5px 5px 5px black;
+    margin: 30px 0px;
+    transition: all 0.5s;
+}
+
+
+.Logolar_info{
+    text-align: center;
+    align-self: center;
+}
+
+.Logolar_info p{
+    text-align: justify;
+    padding: 10px 50px 10px 0px;
+    font-size: 24px;
+}
+
+
+
+
+/* =================================== Oilam bolim section ============================================= */
+.Oilam_bolim{
+    padding: 100px 20px 0px 20px;
+    display: flex;
+}
+
+
+.Oilam_info{
+    width: 50%;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+.Oilam_info p{
+    text-align: justify;
+    font-size: 24px;
+}
+
+.Oilam_rasm{
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    width: 50%;
+    justify-content: space-between;
+}
+.photos_1,.photos_2,.photos_3{
+    height: 400px;
+    padding: 5px;
+}
+
+.photos_1 img,
+.photos_3 img{
+    width: 100%;
+    height: 45%;
+    padding: 5px 0px;
+    border-radius: 10px;
+    animation: famliy-foto1 3s linear infinite;
+}
+
+.photos_2 img{
+    width: 100%;
+    height: 22.5%;
+    border-radius: 10px;
+    padding: 5px 0px;
+    animation: famliy-foto2 3s linear 0.5s infinite;
+}
+
+@keyframes famliy-foto1{
+    50%{
+        transform: scale(1.05,1.05);
+    }
+}
+@keyframes famliy-foto2{
+    50%{
+        transform: scale(1.05,1.05);
+    }
+}
+
+
+
+/* =========================== Resume bolim style ================================= */
+.Resume_bolim{
+    padding: 80px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+}
+
+.Resume_rasm{
+    height: 40%;
+    width: 90%;
+    padding: 5px;
+}
+
+.Resume_rasm img{
+    width: 100%;
+    height: 100%;
+}
+
+.Resume_info{
+    display: flex;
+    justify-content: space-evenly;
+    height: 60%;
+    padding: 20px;
+}
+
+.Resume_info p{
+    text-align: justify;
+    width: 45%;
+    height: 100%;
+    font-size: 24px;
+    margin: 0px;
+}
+
+
+.Resume_info form{
+    width: 45%;
+    text-align: center;
+    padding: 80px 0px 0px 0px;
+    height: 100%;
+}
+
+
+
+
+
+/* =============================== Izohlar bolim style ==================================== */
+
+.Izohlar_bolim{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+}
+
+
+.Izohlar_matn p{
+    font-size: 24px;
+    text-align: center;
+    padding: 25px;
+    background: rgba(0,0,50,0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 30px;
+}
+
+.Izohlar_matn form{
+    text-align: center;
+}
+
+.comment_data i{
+    padding: 0px 5px 20px 5px;
+    letter-spacing: 2px;
+}
+.comment_data span{
+    color: white;
+    padding-right: 10px;
+}
+
+
+

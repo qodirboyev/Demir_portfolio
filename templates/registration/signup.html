@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Qodirboyev Demir</title>
+        <link rel="stylesheet" href="{% static 'css/home_view/main.css' %}">
+        <link rel="icon" href="{% static 'foto/site_logo.jpg' %}">
+        <!-- meta teglar -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- tashqi linklar -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div>
+            <form action="{% url 'home' %}" method="get">
+                {% csrf_token %}
+                <button type="submit" class="button">🔙</button>
+            </form>
+        </div>
+        <h3>Ro'yxatdan o'tish<i class="fa-solid fa-user-plus"></i></h3>
+        <div><i class="fa-solid fa-user" style="color: rgb(98, 98, 214);"></i>{{ user.first_name }}</div>
+    </header>
+
+    <!-- Blur oyna va cantener -->
+    <div class="blur_oynalar">
+            <div class="blur_oyna_top blur_style"></div>
+            <div class="blur_oyna_bottom blur_style"></div>
+        </div>
+    <div class="cantener">
+
+
+    <div>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}{{ form.as_p }}
+            <button type="submit"><i class="fa-solid fa-user-plus"></i></button>
+        </form>
+    </div>
+
+
+    </div><!-- /Blur oyna va cantener -->
+    <footer class="Footer_bolim" id="Footer_bolim"><!--Footer section-->
+            <div class="cantener">
+                <div class="Footer_cantener">
+                    <div class="site_logo">
+                            <a href="{% url 'home' %}">
+                                <img src="{% static 'foto/site_logo.jpg' %}" alt="logo">
+                            </a>
+                    </div>
+                    <div class="Footer_info">
+                        <p class="matn_h4">© 2026 Demir Portfolio — Mehnat, ijod va sabr natijasi.</p>
+                    </div>
+                    <div class="Footer_media">
+                        <a href="https://instagram.com/_qodirboyev_demir_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://t.me/qodirboyev_demir" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://github.com//qodirboyev" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/demir-qodirboyev-b989b83b5/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+    </footer><!--/Footer section-->
+
+</body>
+</html>
