@@ -4,6 +4,7 @@
 <head>
         <title>Qodirboyev Demir</title>
         <link rel="stylesheet" href="{% static 'css/home_view/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/about_resume.css' %}">
         <link rel="icon" href="{% static 'foto/site_logo.jpg' %}">
         <!-- meta teglar -->
         <meta charset="UTF-8">
@@ -17,15 +18,23 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
-        <div>
-            <form action="{% url 'home' %}" method="get">
-                {% csrf_token %}
-                <button type="submit" class="button">🔙</button>
-            </form>
+    <header class="sections_header">
+        <div class="cantener">
+            <div class="sections_header_div">
+                <div class="site_logo">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'foto/site_logo.jpg' %}" alt="logo">
+                    </a>
+                </div>
+                <h3 class="matn_h4"><i class="fa-solid fa-user-tie"></i>Men haqimda</h3>
+                <div>
+                    <form action="{% url 'home' %}" method="get">
+                        {% csrf_token %}
+                        <button type="submit" class="button">🔙</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <h3><i class="fa-solid fa-user-tie"></i>Men haqimda</h3>
-        <div><i class="fa-solid fa-user" style="color: rgb(98, 98, 214);"></i>{{ user.first_name }}</div>
     </header>
 
     <!-- Blur oyna va cantener -->
@@ -36,80 +45,64 @@
     <div class="cantener">
 
     <section class="my_data">
-         <img src="{% static 'foto/logo_it.jpg' %}" alt="logo">
-         <h1>Qodirboyev Demir Zokirjon o'g'li</h1>
-        <span><i class="fa-solid fa-location-dot"></i>Qaraqalpaqstan,Amudaryo tumani Besh-tom MFY 3-orta avul ko'chasi 29-uy</span>
-        <span><i class="fa-solid fa-phone"></i>+998958440617</span>
-        <a href="https://instagram.com/_qodirboyev_demir_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://t.me/qodirboyev_demir" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-        <a href="https://github.com//qodirboyev" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/demir-qodirboyev-b989b83b5/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <div class="my_img">
+            <img src="{% static 'foto/logo_it.jpg' %}" alt="logo">
+        </div>
+        <div class="my_info">
+            <h1 class="matn_h4">Qodirboyev Demir Zokirjon o'g'li</h1>
+            <span class="matn_h4"><i class="fa-solid fa-location-dot" style="color: blueviolet"></i>
+                Qaraqalpaqstan,Amudaryo tumani Besh-tom MFY 3-orta avul ko'chasi 29-uy</span>
+            <span class="matn_h4"><i class="fa-solid fa-phone" style="color: blueviolet"></i>
+                +998958440617</span>
+            <div class="my_media matn_h4">
+                <a href="https://instagram.com/_qodirboyev_demir_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://t.me/qodirboyev_demir" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://github.com//qodirboyev" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/demir-qodirboyev-b989b83b5/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
     </section>
 
     <section class="about_me">
-        <h3>O'zim haqimda</h3>
-        <p>Men</p>
+        <h3 class="matn_h4">O'zim haqimda</h3>
+        <p class="matn_h4">Men</p>
     </section>
 
     <section class="talim">
-        <h1>Ta'lim</h1>
-        <h4><b>Universit:</b> Nukus Memleketlik Texnika Universitet</h4>
-        <h4><b>Yo'nalish:</b> Axborot tizimlari va texnologiyalari</h4>
-        <h4><b>Maktab:</b> Amudaryo tumani 24-sonly o'rta talim maktabi</h4>
+        <h1 class="matn_h4">Ta'lim</h1>
+        <h4 class="matn_h4"><b>Universit:</b> Nukus Memleketlik Texnika Universitet</h4>
+        <h4 class="matn_h4"><b>Yo'nalish:</b> Axborot tizimlari va texnologiyalari</h4>
+        <h4 class="matn_h4"><b>Maktab:</b> Amudaryo tumani 24-sonly o'rta talim maktabi</h4>
     </section>
 
     <section class="bio">
-        <h4>Tug'ilgan sanam: 17.08.2006</h4>
-        <h4>Milatim: Uzbek</h4>
-        <h4>Bo'yim: 1.75m</h4>
-        <h4>Vaznm: +60kg</h4>
-        <h4>Yo'qtirgan ishim: Football,Rasmchizish,Video o'yinlar</h4>
+        <h4 class="matn_h4">Tug'ilgan sanam: 17.08.2006</h4>
+        <h4 class="matn_h4">Milatim: Uzbek</h4>
+        <h4 class="matn_h4">Bo'yim: 1.75m</h4>
+        <h4 class="matn_h4">Vaznm: +60kg</h4>
+        <h4 class="matn_h4">Yo'qtirgan ishim: Football,Rasmchizish,Video o'yinlar</h4>
     </section>
-
-<section class="carusel_img">
-    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="..." class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-</section>
-
 
 
     <section class="blog">
-        {% for blog in object_list %}
-        <div class="blog_kard">
-            <div class="blog_img">
-                <img src="{{ blog.image.url }}" alt="blog_foto">
+            {% for blog in object_list %}
+            <div class="blog_kard">
+                <div class="blog_img">
+                    <img src="{{ blog.image.url }}" alt="blog_foto">
+                </div>
+                <div class="blog_info">
+                    <h4 class="matn_h4">{{ blog.title }}</h4>
+                    <p class="matn_h4">{{ blog.text }}</p>
+                    <sub class="matn_h4">{{ blog.time|date:"d F Y, H:i" }}</sub>
+                </div>
             </div>
-            <div class="blog_info">
-                <h4>{{ blog.title }}</h4>
-                <p>{{ blog.text }}</p>
-                <sub>{{ blog.time|date:"d F Y, H:i" }}</sub>
-            </div>
-        </div>
-        {% endfor %}
+            {% endfor %}
     </section>
         
         
     <div class="add_blog_section">
-        <a href="{% url 'add_blog' %}"><i class="fa-solid fa-square-plus"></i></a>
+        <h3 class="matn_h4">Yangi blog qo'shish</h3>
+        <a href="{% url 'add_blog' %}" class="green_red_button"><i class="fa-solid fa-square-plus"></i></a>
     </div>
 
     </div><!-- /Blur oyna va cantener -->

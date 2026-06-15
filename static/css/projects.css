@@ -1,0 +1,124 @@
+.projects_info{
+    margin-top: 100px;
+    background-color: rgb(0 0 0 / 0.25);
+    backdrop-filter: blur(25px);
+    border-radius: 30px;
+    padding: 30px;
+    text-align: center;
+    font-size: 24px;
+    border:1px solid black ;
+    box-shadow: 3px 3px 3px black;
+}
+
+
+
+
+.project_blog{
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.project_kard{
+    background-color: rgb(0 255 255 / 0.31);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 550px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px black;
+    transition: all 0.5s;
+    margin: 3% 0% 3% 3%;
+}
+.project_kard:hover{
+    transform: scale(1.1,1.1);
+}
+
+.blog_img img{
+    width: 100%;
+    transition: all 0.5s;
+}
+
+
+.blog_info{
+    flex-grow: 2;
+}
+
+.blog_info h4{
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+}
+
+.blog_info p{
+    margin: 0;
+    padding: 5px;
+}
+
+.blog_info sub{
+    display: block;
+    margin: 0;
+    padding: 10px;
+    font-size: 5px;
+    text-align: right;
+}
+
+
+.project_link{
+    text-align: center;
+}
+
+.project_link a{
+    background-color: #006b1b;
+    display: inline-block;
+    width: 100%;
+    border-radius: 0px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+.project_add_button{
+    width: 50%;
+    padding: 50px;
+}
+
+.project_add_button a{
+    display: block;
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+.form_kard label{
+    width: 100%;
+    font-size: 10px;
+    color: white;
+    display: inline-block;
+    text-shadow: 3px 3px 3px black;
+    padding: 5px;
+    letter-spacing: 1px;
+}
+
+.form_kard input,
+.form_kard textarea{
+    width: 100%;
+    border-radius: 10px;
+    transition: all 0.5s;
+    font-size: 16px;
+}
+
+.form_kard input:focus,
+.form_kard textarea:focus{
+    transform: scale(1.1,1);
+}
+
+.form_kard button{
+    width: 45%;
+    padding: 10px;
+}

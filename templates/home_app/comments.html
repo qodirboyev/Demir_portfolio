@@ -4,6 +4,7 @@
 <head>
         <title>Qodirboyev Demir</title>
         <link rel="stylesheet" href="{% static 'css/home_view/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/home_comments.css' %}">
         <link rel="icon" href="{% static 'foto/site_logo.jpg' %}">
         <!-- meta teglar -->
         <meta charset="UTF-8">
@@ -16,20 +17,29 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 <body>
-    <header>
-        <div>
-            <form action="{% url 'home' %}" method="get">
-                {% csrf_token %}
-                <button type="submit" class="button">🔙</button>
-            </form>
+    <header class="sections_header">
+        <div class="cantener">
+            <div class="sections_header_div">
+                <div class="site_logo">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'foto/site_logo.jpg' %}" alt="logo">
+                    </a>
+                </div>
+                <div>
+                    <form action="{% url 'add_comment' %}" method="get">
+                        {% csrf_token %}
+                        <button type="submit" class="green_red_button" style="width: 100%">
+                            Izoh qoldirish💬</button>
+                    </form>
+                </div>
+                <div>
+                    <form action="{% url 'home' %}" method="get">
+                        {% csrf_token %}
+                        <button type="submit" class="button">🔙</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div>
-            <form action="{% url 'add_comment' %}" method="get">
-                {% csrf_token %}
-                <button type="submit" class="button">Izoh qoldirish💬</button>
-            </form>
-        </div>
-        <div><i class="fa-solid fa-user" style="color: rgb(98, 98, 214);"></i>{{ user.first_name }}</div>
     </header>
 
     <!-- Blur oyna va cantener -->
@@ -40,17 +50,21 @@
     <div class="cantener">
 
 
-
-    {% for comment in object_list %}
-        <p><i class="fa-solid fa-circle-user"></i>{{ comment.user.first_name }}</p>
-        <p>{{ comment.text }}
-            <sub>{{ comment.rating }}<i class="fa-solid fa-star" style="color: gold;"></i>
-                 {{ comment.created_at|date:"d F Y, H:i" }}
-                <a href="{% url 'edit_comment' comment.pk %}">Edit</a>
-                <a href="{% url 'delete_comment' comment.pk %}">Delete</a> 
-            </sub>
-        </p>
-    {% endfor %}
+    <section class="comments_section">
+    <div class="comments_div">
+        {% for comment in object_list %}
+            <p class="matn_h4 user_info"><i class="fa-solid fa-circle-user"></i>{{ comment.user.first_name }}</p>
+            <div class="matn_h4 user_comment"><p>{{ comment.text }}</p>
+                <div class="user_comment_info">
+                    <p>{{ comment.rating }}<i class="fa-solid fa-star" style="color: gold;"></i></p>
+                    <p>{{ comment.created_at|date:"d F Y, H:i" }}</p>
+                    <span><a href="{% url 'edit_comment' comment.pk %}">Edit</a>
+                    <a href="{% url 'delete_comment' comment.pk %}">Delete</a></span>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    </section>
 
 
 

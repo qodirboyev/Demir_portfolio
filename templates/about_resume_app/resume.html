@@ -4,6 +4,7 @@
 <head>
         <title>Qodirboyev Demir</title>
         <link rel="stylesheet" href="{% static 'css/home_view/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/about_resume.css' %}">
         <link rel="icon" href="{% static 'foto/site_logo.jpg' %}">
         <!-- meta teglar -->
         <meta charset="UTF-8">
@@ -16,15 +17,23 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
-        <div>
-            <form action="{% url 'home' %}" method="get">
-                {% csrf_token %}
-                <button type="submit" class="button">🔙</button>
-            </form>
+    <header class="sections_header">
+        <div class="cantener">
+            <div class="sections_header_div">
+                <div class="site_logo">
+                    <a href="{% url 'home' %}">
+                    <img src="{% static 'foto/site_logo.jpg' %}" alt="logo">
+                    </a>
+                </div>
+                <h3 class="matn_h4"><i class="fa-solid fa-id-card"></i>Resume</h3>
+                <div>
+                    <form action="{% url 'home' %}" method="get">
+                        {% csrf_token %}
+                        <button type="submit" class="button">🔙</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <h3><i class="fa-solid fa-id-card"></i>Resume</h3>
-        <div><i class="fa-solid fa-user" style="color: rgb(98, 98, 214);"></i>{{ user.first_name }}</div>
     </header>
 
     <!-- Blur oyna va cantener -->
@@ -37,99 +46,100 @@
 
         {% for i in object_list %}
     <section class="my_data">
-         <img src="{% static 'foto/logo_it.jpg' %}" alt="logo">
-         <h1>Qodirboyev Demir</h1>
-         <span><i class="fa-solid fa-location-dot"></i>Qaraqalpaqstan,Amudaryo |
-             <i class="fa-solid fa-phone"></i>+998958440617 |
-             <i class="fa-solid fa-laptop-code"></i>{{ i.kasb }}</span>
-        <a href="https://instagram.com/_qodirboyev_demir_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://t.me/qodirboyev_demir" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-        <a href="https://github.com//qodirboyev" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/demir-qodirboyev-b989b83b5/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-    </section>
-
-    <section class="about_me">
-        <h3>O'zim haqimda</h3>
-        <p>{{ i.about }}</p>
-    </section>
-
-    <section class="talim">
-        <h1>Ta'lim</h1>
-        <h4><b>Universit:</b> Nukus Memleketlik Texnika Universitet</h4>
-        <h4><b>Yo'nalish:</b> Axborot tizimlari va texnologiyalari</h4>
-    </section>
-
-    <section class="skills">
-        <h1>Texnik Ko'nikmalar</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Bo'lim</th>
-                    <th>Texnologiyalar</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Dasturlash tillari</td>
-                    <td>{{ i.dev_long }}</td>
-                </tr>
-                <tr>
-                    <td>Frameworklar</td>
-                    <td>{{ i.frameworks }}</td>
-                </tr>
-                <tr>
-                    <td>Ma’lumotlar bazasi</td>
-                    <td>{{ i.database }}</td>
-                </tr>
-                <tr>
-                    <td>Frontend texnologiyalari</td>
-                    <td>{{ i.frontend_t }}</td>
-                </tr>
-                <tr>
-                    <td>Python modullari</td>
-                    <td>{{ i.python_modul }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <div>
-        <h1><i class="fa-solid fa-bars-progress"></i>Loyhalar</h1>
-        <a href="" class="button">Ko'rish</a>
-    </div>
-
-    <section class="ish_joy">
-        <h1>📂 Ish tajribasi (Work Experience)</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Ish joyi</th>
-                    <th>Lavozim</th>
-                    <th>Vazifalar</th>
-                    <th>Ishlash davri</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{{ i.ish_joy }}</td>
-                    <td>{{ i.lavozim }}</td>
-                    <td>{{ i.vazifalar }}</td>
-                    <td>{{ i.ishlash_davri }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <section class="yutuqlar">
-        <div>
-            <img src="{{ i.yutuq_rasm.url }}" alt="rasm">
-            <p>{{ i.yutuq_info }}</p>
+        <div class="my_img">
+             <img src="{% static 'foto/logo_it.jpg' %}" alt="logo">
+        </div>
+        <div class="my_info">
+             <h1 class="matn_h4">Qodirboyev Demir</h1>
+             <span class="matn_h4"><i class="fa-solid fa-location-dot" style="color: blueviolet"></i>Qaraqalpaqstan,Amudaryo |
+                 <i class="fa-solid fa-phone" style="color: blueviolet"></i>+998958440617 |
+                 <i class="fa-solid fa-laptop-code"></i>{{ i.kasb }}</span>
+            <div class="my_media matn_h4">
+                <a href="https://instagram.com/_qodirboyev_demir_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://t.me/qodirboyev_demir" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://github.com//qodirboyev" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/demir-qodirboyev-b989b83b5/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
         </div>
     </section>
 
+    <section class="about_me">
+        <h3 class="matn_h4">O'zim haqimda</h3>
+        <p class="matn_h4">{{ i.about }}</p>
+    </section>
+
+    <section class="talim">
+        <h1 class="matn_h4">Ta'lim</h1>
+        <h4 class="matn_h4"><b>Universit:</b> Nukus Memleketlik Texnika Universitet</h4>
+        <h4 class="matn_h4"><b>Yo'nalish:</b> Axborot tizimlari va texnologiyalari</h4>
+    </section>
+
+    <section class="skills">
+        <h1 class="matn_h4">Texnik Ko'nikmalar</h1>
+        <table class="jadval">
+            <thead>
+                <tr>
+                    <th class="matn_h4">Bo'lim</th>
+                    <th class="matn_h4">Texnologiyalar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="matn_h4">Dasturlash tillari</td>
+                    <td class="matn_h4">{{ i.dev_long }}</td>
+                </tr>
+                <tr>
+                    <td class="matn_h4">Frameworklar</td>
+                    <td class="matn_h4">{{ i.frameworks }}</td>
+                </tr>
+                <tr>
+                    <td class="matn_h4">Ma’lumotlar bazasi</td>
+                    <td class="matn_h4">{{ i.database }}</td>
+                </tr>
+                <tr>
+                    <td class="matn_h4">Frontend texnologiyalari</td>
+                    <td class="matn_h4">{{ i.frontend_t }}</td>
+                </tr>
+                <tr>
+                    <td class="matn_h4">Python modullari</td>
+                    <td class="matn_h4">{{ i.python_modul }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <div class="Loyihalar_section">
+        <h1 class="matn_h4"><i class="fa-solid fa-bars-progress"></i>Loyihalar</h1>
+        <a href="" class="green_red_button">Ko'rish...</a>
+    </div>
+
+    <section class="ish_joy">
+        <h1 class="matn_h4">📂 Ish tajribasi (Work Experience)</h1>
+        <table class="jadval">
+            <thead>
+                <tr>
+                    <th class="matn_h4">Ish joyi</th>
+                    <th class="matn_h4">Lavozim</th>
+                    <th class="matn_h4">Vazifalar</th>
+                    <th class="matn_h4">Ishlash davri</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="matn_h4">{{ i.ish_joy }}</td>
+                    <td class="matn_h4">{{ i.lavozim }}</td>
+                    <td class="matn_h4">{{ i.vazifalar }}</td>
+                    <td class="matn_h4">{{ i.ishlash_davri }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
     <section class="Tillar">
-        <h1>Tillar</h1>
-        <p>{{ i.life_long }} <sub><a href="{% url 'edit_resume' i.pk %}" class="button"><i class="fa-solid fa-pen-to-square"></i></a>
+        <h1 class="matn_h4">Tillar</h1>
+        <p class="matn_h4">{{ i.life_long }} <sub>
+            <a href="{% url 'edit_resume' i.pk %}" class="green_red_button update"><i class="fa-solid fa-pen-to-square"></i></a>
         </sub></p>
     </section>
     {% endfor %}

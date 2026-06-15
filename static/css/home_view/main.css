@@ -5,9 +5,10 @@ html{
 
 body{
     background-image: linear-gradient(to right bottom,white,rgb(1, 1, 222),rgb(2, 2, 223),black);
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Arial', "Bebas Neue", sans-serif;
     background-attachment: fixed;
     margin: 0;
+    overflow-x: hidden;
 }
 
 .cantener{
@@ -21,7 +22,7 @@ body{
 
 /* blur oyna style */
 .blur_style{      
-    width: 100vw;
+    width: 100%;
     height: 50vh;
     position: fixed;
     z-index: 11;
@@ -51,6 +52,36 @@ body{
 /* blur oyna style */
 
 
+
+/*  sections header style */
+.sections_header{
+    background-image: linear-gradient(to right bottom,white,rgb(1, 1, 222),rgb(2, 2, 223),black);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    box-shadow: 5px 5px 5px black;
+}
+
+.sections_header_div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sections_header_div > div{
+    width: 25%;
+}
+
+.sections_header_div form{
+    text-align: right;
+}
+
+
+/*  sections header style */
+
+
+
 /* button style */
 .button{
     background: linear-gradient(to right bottom,white,blue,black,black);
@@ -66,7 +97,48 @@ body{
     color: yellow;
     width: 50%;
 }
+
+.green_red_button{
+    color: white;
+    background: linear-gradient(to top left,green,darkred);
+    border-radius: 10px;
+    padding: 3px 10px;
+    transition: all 0.4s;
+    margin-right: 3px;
+}
+.green_red_button:hover{
+    transform: translateY(-3px) scale(1.1,1.1);
+    background: linear-gradient(to bottom right,green,darkred);
+    color: yellow;
+}
+
+
 /* button style */
+
+
+/* form style */
+.form_main{
+    padding: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+.form_kard{
+    background-color: rgb(156 111 111 / 0.22);
+    backdrop-filter: blur(20px);
+    border: 1px solid black;
+    padding: 20px 100px;
+    border-radius: 10%;
+}
+
+
+
+/* form style */
+
 
 
 /* h4 matn style */
@@ -119,41 +191,51 @@ body{
 
 /* ============================= Footer bolim style ======================================= */
 .Footer_bolim{
-    padding: 50px 20px;
-    background-color: black;
-    width: 100%;
+    background: black;
 }
 
 .Footer_cantener{
+    max-width: 1200px;
+    margin: 0 auto;
+    background: black;
+    padding: 50px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    text-align: center;
+    gap: 20px;
 }
-
-
-.Footer_media i{
-    color: azure;
-    font-size: 30px;
-    transition: all 0.3s;
-    margin: 5px;
-}
-.Footer_media i:hover{
-    color: rgba(111, 255, 0, 0.441);
-    transform: scale(1.1,1.1) translateY(-3px);
-}
-
 
 .Footer_info p{
-    font-size: 24px;
-    padding: 15px;
+    color: white;
+    font-size: 18px;
+    margin: 0;
+}
+
+.Footer_media{
+    display: flex;
+    gap: 15px;
+}
+
+.Footer_media a{
+    text-decoration: none;
+}
+
+.Footer_media i{
+    color: white;
+    font-size: 28px;
+    transition: .3s;
+}
+
+.Footer_media i:hover{
+    transform: translateY(-5px);
+    color: rgb(111,255,0);
 }
 /* ============================= Footer bolim style ======================================= */
 
 /* site_logo style */
 .site_logo img {
     width: 50px;
-    padding: 3px;
     border-radius: 50%;
     margin: 2px 0px 0px 0px;
     transition: all 0.5s;
@@ -161,4 +243,5 @@ body{
 .site_logo img:hover{
     transform: scale(1.1,1.1);
 }
+
 /* site_logo style */

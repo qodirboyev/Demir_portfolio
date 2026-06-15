@@ -11,12 +11,10 @@ class Resume(models.Model):
     database = models.CharField(max_length=200)
     frontend_t = models.CharField(max_length=200)
     python_modul = models.CharField(max_length=200)
-    ish_joy = models.CharField(max_length=200)
-    lavozim = models.CharField(max_length=200)
-    vazifalar = models.CharField(max_length=200)
-    ishlash_davri = models.CharField(max_length=200)
-    yutuq_rasm = models.ImageField(upload_to='media/photos')
-    yutuq_info = models.CharField(max_length=200)
+    ish_joy = models.CharField(max_length=200,null=True,blank=True)
+    lavozim = models.CharField(max_length=200,null=True,blank=True)
+    vazifalar = models.CharField(max_length=200,null=True,blank=True)
+    ishlash_davri = models.CharField(max_length=200,null=True,blank=True)
     life_long = models.CharField(max_length=200)
     def __str__(self):
         return self.kasb

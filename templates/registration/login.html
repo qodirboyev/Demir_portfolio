@@ -4,28 +4,36 @@
 <head>
         <title>Qodirboyev Demir</title>
         <link rel="stylesheet" href="{% static 'css/home_view/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/accounts.css' %}">
         <link rel="icon" href="{% static 'foto/site_logo.jpg' %}">
         <!-- meta teglar -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
 
         <!-- tashqi linklar -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
-        <div>
-            <form action="{% url 'home' %}" method="get">
-                {% csrf_token %}
-                <button type="submit" class="button">🔙</button>
-            </form>
+    <header class="sections_header">
+        <div class="cantener">
+            <div class="sections_header_div">
+                <div class="site_logo">
+                        <a href="{% url 'home' %}">
+                            <img src="{% static 'foto/site_logo.jpg' %}" alt="logo">
+                        </a>
+                </div>
+                <h3 class="matn_h4">Kirish...<i class="fa-solid fa-right-to-bracket"></i></h3>
+                <div class="back_button">
+                    <form action="{% url 'home' %}" method="get">
+                        {% csrf_token %}
+                        <button type="submit" class="button">🔙</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <h3>Kirish...<i class="fa-solid fa-right-to-bracket"></i></h3>
-        <div><i class="fa-solid fa-user" style="color: rgb(98, 98, 214);"></i>{{ user.first_name }}</div>
     </header>
 
     <!-- Blur oyna va cantener -->
@@ -36,11 +44,13 @@
     <div class="cantener">
 
 
-    <div>
-        <form action="" method="post" enctype="multipart/form-data">
-            {% csrf_token %}{{ form.as_p }}
-            <button type="submit"><i class="fa-solid fa-right-to-bracket"></i></button>
-        </form>
+    <div class="form_main">
+        <div class="form_kard">
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}{{ form.as_p }}
+                <button type="submit" class="green_red_button"><i class="fa-solid fa-right-to-bracket"></i></button>
+            </form>
+        </div>
     </div>
 
 

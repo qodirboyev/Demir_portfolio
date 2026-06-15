@@ -1,0 +1,139 @@
+.comments_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 100px;
+    box-sizing: border-box;
+}
+
+.comments_div{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255 255 255 / 0.34);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    width: 50%;
+}
+
+.comments_div p{
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.comments_div > p,
+.user_comment{
+    animation: comment 2s linear infinite alternate;
+}
+@keyframes comment {
+    100%{
+        transform: scale(1.1,1.1);
+    }
+
+}
+
+.user_info{
+    background-color: rgb(0 107 27 / 0.89);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.user_comment{
+    background-color: rgb(7 0 107 / 0.45);
+    backdrop-filter: blur(20px);
+    border-radius: 0px 0px 10px 10px;
+    margin-bottom: 30px;
+}
+.user_comment > p{
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.user_comment div{
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(20px);
+    display: flex;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    justify-content: space-between;
+}
+
+.user_comment_info p{
+    font-size: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+
+.user_comment_info a{
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+    padding: 3px 5px;
+    border-radius: 10px;
+    transition: all 0.5s;
+    display: inline-block;
+}
+
+.user_comment_info a:hover{
+    background-color: green;
+    color: yellow;
+    transform: translateY(-3px);
+}
+
+
+
+
+.form_kard label{
+    font-size: 10px;
+    color: white;
+    letter-spacing: 1px;
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    text-shadow: 3px 3px 3px black;
+}
+
+
+.form_kard input{
+    width: 8%;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.5s;
+    background: none;
+    color: yellow;
+    display: inline-block;
+    float: left;
+}
+
+.form_kard span{
+    float: left;
+    transform: translateY(-17px);
+}
+
+.form_kard input:focus{
+    transform: scale(1.1,1.1);
+}
+
+
+.form_kard textarea{
+    border-radius: 10px;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.5s;
+    background-color: rgb(0 0 0 / 0.25);
+    backdrop-filter: blur(20px);
+    color: white;
+}
+
+.form_kard textarea:focus{
+    transform: scale(1.1,1);
+}
+
+
+.form_kard button{
+    width: 100%;
+    font-size: 24px;
+}

@@ -4,6 +4,7 @@
 <head>
         <title>Qodirboyev Demir</title>
         <link rel="stylesheet" href="{% static 'css/home_view/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/home_comments.css' %}">
         <link rel="icon" href="{% static 'foto/site_logo.jpg' %}">
         <!-- meta teglar -->
         <meta charset="UTF-8">
@@ -16,15 +17,23 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 <body>
-    <header>
-        <div>
-            <form action="{% url 'comments' %}" method="get">
-                {% csrf_token %}
-                <button type="submit" class="button">🔙</button>
-            </form>
+    <header class="sections_header">
+        <div class="cantener">
+            <div class="sections_header_div">
+                <div class="site_logo">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'foto/site_logo.jpg' %}" alt="logo">
+                    </a>
+                </div>
+                <h3 class="matn_h4">Izohni o'chirish🗑️</h3>
+                <div>
+                    <form action="{% url 'comments' %}" method="get">
+                        {% csrf_token %}
+                        <button type="submit" class="button">🔙</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <h3>Izohni o'chirish🗑️</h3>
-        <div><i class="fa-solid fa-user" style="color: rgb(98, 98, 214);"></i>{{ user.first_name }}</div>
     </header>
 
     <!-- Blur oyna va cantener -->
@@ -35,12 +44,14 @@
     <div class="cantener">
 
 
-    <div>
-        <form action="" method="post">
-            {% csrf_token %}
-            <p>{{ comment.text }}</p>
-            <button type="submit">🗑️</button>
-        </form>
+    <div class="form_main">
+        <div class="form_kard">
+            <form action="" method="post">
+                {% csrf_token %}
+                <h2 class="matn_h4">({{ comment.text }})-izohni o'chirish.</h2>
+                <button type="submit" class="green_red_button">🗑️</button>
+            </form>
+        </div>
     </div>
 
 

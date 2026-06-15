@@ -1,0 +1,33 @@
+
+
+.form_kard ul{
+    display: none;
+}
+
+.form_kard label{
+    color: white;
+    padding: 5px;
+    width: 100%;
+    display: inline-block;
+    text-shadow: 3px 3px 3px black;
+    letter-spacing: 1px;
+    font-size: 10px;
+}
+
+.form_kard input{
+    width: 100%;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.5s;
+}
+
+
+.form_kard input:focus{
+    transform: translateY(-2px) scale(1.1,1.1);
+}
+
+.form_kard button{
+    width: 40%;
+    padding: 10px;
+}
+

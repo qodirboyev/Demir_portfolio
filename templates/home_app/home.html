@@ -3,8 +3,8 @@
 <html>
     <head>
         <title>Qodirboyev Demir</title>
-        <link rel="stylesheet" href="{% static 'css/home_view/home.css' %}">
         <link rel="stylesheet" href="{% static 'css/home_view/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/home_view/home.css' %}">
         <link rel="icon" href="{% static 'foto/site_logo.jpg' %}">
         <!-- meta teglar -->
         <meta charset="UTF-8">
@@ -39,44 +39,69 @@
                     <nav class="menu_navbar">
                         <ul class="menu_ul">
                             <li class="menu_element">
-                                <a href="#Asosiy_bolim">Asosiy</a>
+                                <a href="#Asosiy_bolim">
+                                    <i class="fa-solid fa-house"></i>
+                                    <span>Asosiy</span>
+                                </a>
                             </li>
                             <li class="menu_element">
-                                <a href="#Men_haqimda_bolim">Men haqimda</a>
+                                <a href="#Men_haqimda_bolim">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                    <span>Men haqimda</span>
+                                </a>
                             </li>
                             <li class="menu_element">
-                                <a href="#loyihalar_bolim">Loyihalar</a>
+                                <a href="#loyihalar_bolim">
+                                    <i class="fa-solid fa-bars-progress"></i>
+                                    <span>Loyihalar</span>
+                                </a>
                             </li>
                             <li class="menu_element">
-                                <a href="#Logolar_bolim">Logolar</a>
+                                <a href="#Logolar_bolim">
+                                    <i class="fa-solid fa-paintbrush"></i>
+                                    <span>Logolar</span>
+                                </a>
                             </li>
                             <li class="menu_element">
-                                <a href="#Oilam_bolim">Oilam</a>
+                                <a href="#Oilam_bolim">
+                                    <i class="fa-solid fa-hands-holding-child"></i>
+                                    <span>Oilam</span>
+                                </a>
                             </li>
                             <li class="menu_element">
-                                <a href="#Resume_bolim">Resume</a>
+                                <a href="#Resume_bolim">
+                                    <i class="fa-solid fa-address-card"></i>
+                                    <span>Resume</span>
+                                </a>
                             </li>
                             <li class="menu_element">
-                                <a href="#Izohlar_bolim">Izohlar</a>
+                                <a href="#Izohlar_bolim">
+                                    <i class="fa-solid fa-comment-dots"></i>
+                                    <span>Izohlar</span>
+                                </a>
                             </li>
                         </ul>
                     </nav>
                     <div class="user_register">
                         {% if user.is_authenticated %}
-                        <div><i class="fa-solid fa-user" style="color: rgb(98, 98, 214);"></i>{{ user.first_name }}</div>
-                        <form action="{% url 'logout' %}" method="post">
-                            {% csrf_token %}
-                            <button type="submit" class="button">logout<i class="fa-solid fa-right-from-bracket"></i></button>
-                        </form>
+                        <div class="logout_username">
+                            <div class="matn_h4"><i class="fa-solid fa-user" style="color: rgb(98, 98, 214);"></i>{{ user.first_name }}</div>
+                            <form action="{% url 'logout' %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="green_red_button">logout<i class="fa-solid fa-right-from-bracket"></i></button>
+                            </form>
+                        </div>
                         {% else %}
-                        <form action="{% url 'login' %}" method="post">
-                            {% csrf_token %}
-                            <button type="submit" class="button">Login<i class="fa-solid fa-right-to-bracket"></i></button>
-                        </form>
-                        <form action="{% url 'signup' %}" method="get">
-                            {% csrf_token %}
-                            <button type="submit" class="button">Signup<i class="fa-solid fa-user-plus"></i></button>
-                        </form>
+                        <div class="login_signup">
+                            <form action="{% url 'login' %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="green_red_button">Login<i class="fa-solid fa-right-to-bracket"></i></button>
+                            </form>
+                            <form action="{% url 'signup' %}" method="get">
+                                {% csrf_token %}
+                                <button type="submit" class="green_red_button">Signup<i class="fa-solid fa-user-plus"></i></button>
+                            </form>
+                        </div>
                         {% endif %}
                     </div>
                 </div>

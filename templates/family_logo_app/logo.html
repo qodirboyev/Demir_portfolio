@@ -4,6 +4,7 @@
 <head>
         <title>Qodirboyev Demir</title>
         <link rel="stylesheet" href="{% static 'css/home_view/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/family_logo.css' %}">
         <link rel="stylesheet" href="{% static 'css/home_view/home.css' %}">
         <link rel="icon" href="{% static 'foto/site_logo.jpg' %}">
         <!-- meta teglar -->
@@ -17,15 +18,23 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
-        <div>
-            <form action="{% url 'home' %}" method="get">
-                {% csrf_token %}
-                <button type="submit" class="button">🔙</button>
-            </form>
+    <header class="sections_header">
+        <div class="cantener">
+            <div class="sections_header_div">
+                <div class="site_logo">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'foto/site_logo.jpg' %}" alt="logo">
+                    </a>
+                </div>
+                <h3 class="matn_h4">Logolar bo'limi<i class="fa-solid fa-paintbrush"></i></h3>
+                <div>
+                    <form action="{% url 'home' %}" method="get">
+                        {% csrf_token %}
+                        <button type="submit" class="button">🔙</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <h3>Logolar bo'limi<i class="fa-solid fa-paintbrush"></i></h3>
-        <div><i class="fa-solid fa-user" style="color: rgb(98, 98, 214);"></i>{{ user.first_name }}</div>
     </header>
 
     <!-- Blur oyna va cantener -->
@@ -82,9 +91,9 @@
                 <img src="{{ logo.image.url }}" alt="blog_foto">
             </div>
             <div class="blog_info">
-                <h4>{{ logo.title }}</h4>
-                <p>{{ logo.text }}</p>
-                <sub>{{ logo.time|date:"d F Y, H:i" }}</sub>
+                <h4 class="matn_h4">{{ logo.title }}</h4>
+                <p class="matn_h4">{{ logo.text }}</p>
+                <sub class="matn_h4">{{ logo.time|date:"d F Y, H:i" }}</sub>
             </div>
         </div>
         {% endfor %}
@@ -92,8 +101,11 @@
 
 
 
-    <div>
-        <a href="{% url 'add_logo' %}" class="button"><i class="fa-solid fa-square-plus"></i></a>
+    <div class="add_logo_blog">
+        <h4 class="matn_h4">Yangi logo qo'shish</h4>
+        <a href="{% url 'add_logo' %}" class="green_red_button">
+            <i class="fa-solid fa-square-plus"></i>
+        </a>
     </div>
 
 

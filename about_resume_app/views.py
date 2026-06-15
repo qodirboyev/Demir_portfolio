@@ -15,7 +15,7 @@ class ResumeUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
     model = Resume
     template_name = "about_resume_app/edit_resume.html"
     fields = ['kasb','about','dev_long','frameworks','database','frontend_t','python_modul',
-              'ish_joy','lavozim','vazifalar','ishlash_davri','yutuq_rasm','yutuq_info','life_long']
+              'ish_joy','lavozim','vazifalar','ishlash_davri','life_long']
 
     def test_func(self):
         return self.request.user.is_superuser
