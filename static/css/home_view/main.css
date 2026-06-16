@@ -254,7 +254,7 @@ body{
 @media only screen and (max-width:1024px) {
     /* blur oyna style */
     .blur_style{      
-        height: 57vh;
+        height: 75vh;
     }
 
 /* blur oyna style */
@@ -293,8 +293,84 @@ body{
 
 /* form style */
 
-        
+}    /* pad style end */
 
 
+
+@media only screen and (max-width:768px){
+
+    .cantener{
+        width: 95%;
+    }
+
+    .blur_style{
+        height: 50vh;
+    }
+
+    /* Header */
+
+    .sections_header_div > div{
+        width: 30%;
+    }
+
+    .sections_header_div h3{
+        font-size: 10px;
+        text-align: center;
+    }
+
+    /* Logo */
+
+    .site_logo img{
+        width: 40px;
+    }
+
+    /* Button */
+
+    .button{
+        padding: 5px 3px 5px 0;
+        font-size: 14px;
+    }
+
+    /* Form */
+
+    .form_main{
+        padding: 100px 10px 50px;
+    }
+
+    .form_kard{
+        width: 100%;
+        padding: 20px;
+        margin: 30% 0;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .form_kard input,
+    .form_kard textarea,
+    .form_kard select{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Footer */
+
+    .Footer_cantener{
+        padding: 30px 10px 100px 10px;
+    }
+
+    .Footer_info p{
+        font-size: 14px;
+    }
+
+    .Footer_media{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .Footer_media i{
+        font-size: 24px;
+    }
 
 }
+
+

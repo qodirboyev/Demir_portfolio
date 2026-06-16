@@ -233,5 +233,141 @@
 
 
 
+@media only screen and (max-width:768px){
 
-/* ================= resume update form style =================  */
+    .my_data{
+        padding: 80px 10px 20px;
+    }
+
+    .my_img img{
+        width: 80px;
+    }
+
+    .my_info h1{
+        font-size: 24px;
+    }
+
+    .my_info span{
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .my_media a{
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .about_me,
+    .talim,
+    .bio,
+    .Loyihalar_section,
+    .Tillar{
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .talim h1,
+    .skills h1,
+    .ish_joy h1,
+    .Tillar h1{
+        font-size: 1.2rem;
+    }
+
+    .bio h4{
+        width: 95%;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    .bio h4:hover{
+        transform: none;
+    }
+
+    .Loyihalar_section{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .Loyihalar_section a{
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .blog{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog_kard{
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+  
+
+    .blog_img,
+    .blog_info{
+        width: 100%;
+    }
+
+    .blog_img img{
+        width: 100%;
+        display: block;
+    }
+
+    .blog_info h4{
+        font-size: 18px;
+    }
+
+    .blog_info p{
+        font-size: 14px;
+    }
+
+    .blog_info sub{
+        font-size: 10px;
+    }
+
+    .add_blog_section{
+        width: 100%;
+        padding: 20px 10px;
+        box-sizing: border-box;
+    }
+
+    .add_blog_section a,
+    .form_kard button,
+    .update{
+        width: 100%;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .form_kard{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form_kard label{
+        font-size: 12px;
+    }
+
+    .form_kard input,
+    .form_kard textarea{
+        width: 100%;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+
+    .skills,
+    .ish_joy{
+        padding: 15px;
+        overflow-x: auto;
+    }
+
+    .jadval{
+        min-width: 600px;
+    }
+
+}

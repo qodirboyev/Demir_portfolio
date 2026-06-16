@@ -31,3 +31,38 @@
     padding: 10px;
 }
 
+@media only screen and (max-width:768px){
+
+    .form_kard{
+        width: 90%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .form_kard ul{
+        display: none;
+    }
+
+    .form_kard label{
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .form_kard input{
+        width: 100%;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    .form_kard input:focus{
+        transform: scale(1.03);
+    }
+
+    .form_kard button{
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+}

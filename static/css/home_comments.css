@@ -151,3 +151,78 @@
     
 
 }
+
+
+
+
+@media only screen and (max-width:768px){
+    .sections_header_div button{
+        font-size: 10px;
+    }
+
+    .comments_section{
+        padding: 80px 10px 20px;
+    }
+
+    .comments_div{
+        width: 100%;
+        padding: 15px;
+        margin: 30% 0;
+        box-sizing: border-box;
+    }
+
+    .comments_div p{
+        font-size: 14px;
+    }
+
+    .user_comment > p{
+        font-size: 14px;
+    }
+
+    .user_comment_info p{
+        font-size: 9px;
+    }
+
+    .user_comment_info a{
+        font-size: 9px;
+        padding: 2px 4px;
+    }
+
+    .user_comment div{
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .form_kard{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form_kard label{
+        font-size: 12px;
+    }
+
+    .form_kard input{
+        width: 20%;
+        font-size: 14px;
+    }
+
+    .form_kard span{
+        transform: translateY(-12px);
+        font-size: 14px;
+    }
+
+    .form_kard textarea{
+        width: 100%;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    .form_kard button{
+        width: 100%;
+        font-size: 18px;
+    }
+
+
+
+}
