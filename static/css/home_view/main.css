@@ -132,7 +132,8 @@ body{
     backdrop-filter: blur(20px);
     border: 1px solid black;
     padding: 20px 100px;
-    border-radius: 10%;
+    border-radius: 30px;
+    width: 50%;
 }
 
 
@@ -245,3 +246,55 @@ body{
 }
 
 /* site_logo style */
+
+
+
+
+
+@media only screen and (max-width:1024px) {
+    /* blur oyna style */
+    .blur_style{      
+        height: 57vh;
+    }
+
+/* blur oyna style */
+/*  sections header style */
+    .sections_header{
+        background-image: linear-gradient(to right bottom,white,rgb(1, 1, 222),rgb(2, 2, 223),black);
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        top: 0;
+        box-shadow: 5px 5px 5px black;
+    }
+
+    .sections_header_div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sections_header_div > div{
+        width: 33%;
+    }
+
+    .sections_header_div form{
+        text-align: right;
+    }
+
+/* form style */
+
+    .form_kard{
+        width: 50%;
+        margin: 20% auto;
+    }
+
+
+
+/* form style */
+
+        
+
+
+
+}

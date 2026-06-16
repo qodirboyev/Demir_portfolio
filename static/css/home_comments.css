@@ -14,7 +14,7 @@
     backdrop-filter: blur(10px);
     padding: 30px;
     border-radius: 20px;
-    width: 50%;
+    width: 70%;
 }
 
 .comments_div p{
@@ -136,4 +136,18 @@
 .form_kard button{
     width: 100%;
     font-size: 24px;
+}
+
+
+
+
+@media only screen and (max-width:1024px){
+    .comments_div{
+        padding: 30px;
+        width: 80%;
+        margin: 15%;
+    }    
+
+    
+
 }

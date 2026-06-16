@@ -188,7 +188,7 @@
 
 .loyihalar_title{
     width: 100%;
-    font-size: 46px;
+    font-size: 40px;
     text-align: center;
     grid-column: 1 /span 2;
     padding: 20px;
@@ -470,3 +470,39 @@
 
 
 
+
+@media only screen and (max-width:1024px){   /* pad style start */
+/* header section style pad */
+    .menu_element a{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .menu_element i,
+    .menu_element span{
+        display: inline-block;
+        }
+
+    .menu_element span{
+        font-size: 5px;
+        text-align: center;
+        padding: 3px;
+    }
+/* header section style pad */
+
+/* Asosiy bolim style pad */
+    .Asosiy_bolim{
+        padding: 100px 10px;
+    }
+
+    .Asosiy_bolim_matn{
+
+    }
+
+    section{
+        padding: 100px 10px;
+    }
+}  /* pad style end */
