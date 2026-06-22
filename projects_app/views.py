@@ -6,7 +6,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
 
 
 
-class ProjectListView(LoginRequiredMixin,ListView):
+class ProjectListView(ListView):
     model = Project
     template_name = 'projects_app/projects.html'
 
